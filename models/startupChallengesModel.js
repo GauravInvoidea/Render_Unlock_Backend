@@ -31,7 +31,7 @@ const StartupChallengesSchema = new Schema({
 
   slug: { type: String, required: true },
   registrationStartDate: { type: Date, required: true },
-  registrationEndDate: { type: Date, required: true },
+  registrationEndDate: { type: Date, required: true },  
   resultDate: { type: Date, required: true },
   prizeAmount: { type: Schema.Types.Decimal128, required: true },
   type: { type: String, required: true }, // "premium" or "normal"
@@ -39,7 +39,7 @@ const StartupChallengesSchema = new Schema({
   paymentStatus: { type: Number, default: 0 }, // 0 => unpaid, 1 => paid
   status: { type: Number, default: 0 }, // 0 => pending, 1 => pending for approval, 2 => Approved, 3 => Rejected
   whoCanParticipate: { type: String, required: true },
-  company: { type: String, required: true }
+  // company: { type: String, required: true }
 
 }, { timestamps: true });
 

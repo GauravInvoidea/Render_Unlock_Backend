@@ -16,7 +16,11 @@ const userAuth = async (req, res, next) => {
 
 		const user = verifyJWT(token);
 		console.log("middleware " , user)
+
+		// const rootUser = await User.findById(user.userId);
+
 		const rootUser = await User.findById(user.user.id);
+
 		if (!rootUser) {
             return res.status(404).json({ message: "user does not exist" });
         }

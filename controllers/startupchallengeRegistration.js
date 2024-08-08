@@ -9,7 +9,7 @@ exports.StartupChallengeRegistrationController = async (req, res) => {
     userId,
     challengeId,
     registrationDetails,
-    eventType,
+    // eventType,
     paymentAmount,
     registrationStatus,
   } = req.body;
@@ -41,7 +41,7 @@ exports.StartupChallengeRegistrationController = async (req, res) => {
       userId,
       challengeId,
       registrationDetails,
-      eventType,
+      // eventType,
       paymentAmount,
       registrationStatus,
     });

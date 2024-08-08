@@ -25,7 +25,7 @@ const EventsSchema = new Schema({
   video_url: { type: String, required: true },
   reference_url: { type: String, default: "" },
   thumbnailImage: { type: String, required: true },
-  company: { type: String, required: true },
+  // company: { type: String, required: true },
   coverImage: { type: String, required: true },
   // category: { type: String, required: true },
   category: { type: Schema.Types.ObjectId, required: true, ref: 'categories' },

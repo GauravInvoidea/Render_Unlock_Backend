@@ -9,7 +9,7 @@ const Events = require("../models/eventsModel");
 const generateEventData = (count) => {
   const events = [];
   const sampleCategories = ['668cfc81b6d1ebffc8a440f5', '668cfd58b6d1ebffc8a4410e', '668cfd69b6d1ebffc8a44112']; 
-  const sampleUsers = ['66aa26f970a00ae00d1f8910', '66a0e1b729cd4136121cc60f']; // Replace with actual user IDs
+  const sampleUsers = ['66b1e539635a571f9b197d5e', '66a0e1b729cd4136121cc60f']; // Replace with actual user IDs
   video_urlDummy = "https://www.youtube.com/watch?v=c7kAfYuPTgA";
   reference_urlDummy = "https://www.youtube.com/watch?v=c7kAfYuPTgA";
   thumbnailImageDummy = "Screenshot from 2024-07-12 14-23-05.png"

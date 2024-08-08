@@ -9,7 +9,7 @@ const { upload } = require("../helpers/multer");
  
 // ]), startupchallengeRegistration.startupchallengeRegistration);
 
-
+  
 
 router.post("/create-eventregistration", upload.fields([
     { name: 'registrationDetails', maxCount: 1 },

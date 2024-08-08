@@ -9,7 +9,7 @@ exports.EventRegistrationController = async (req, res) => {
     userId,
     eventId,
     registrationDetails,
-    eventType,
+    // eventType,
     paymentAmount,
     registrationStatus,
   } = req.body;
@@ -41,7 +41,7 @@ exports.EventRegistrationController = async (req, res) => {
       userId,
       eventId,
       registrationDetails,
-      eventType,
+      // eventType,
       paymentAmount,
       registrationStatus,
     });
@@ -50,7 +50,7 @@ exports.EventRegistrationController = async (req, res) => {
     const savedChallenge = await ChallengeRegistration.save();
 
     return res.status(201).json({
-      message: "Event registered successfully",
+      message: "You are Registered For This Challenges successfully",
       data: savedChallenge,
     });
   } catch (error) {

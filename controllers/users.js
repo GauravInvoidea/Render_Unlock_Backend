@@ -64,7 +64,7 @@ exports.adminLogin = async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (isMatch) {
 
-      const token = jwt.sign({ userId: user.id }, process.env.ACCESS_TOKEN_SECRET);
+      const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET);
 
       return res.status(200).json({
         message: "Login Successfull",

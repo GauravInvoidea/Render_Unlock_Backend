@@ -10,7 +10,7 @@ exports.createEvent = async (req, res) => {
       eventDate,
       eventAddress,
       isAdmin,
-      company,
+
       eventDetails,
       video_url,
       reference_url,
@@ -37,7 +37,7 @@ exports.createEvent = async (req, res) => {
     const newEvent = new Events({
       eventName,
       postedBy,
-      company,
+
       slug,
       category,
       location,
@@ -160,7 +160,7 @@ exports.updateEventDetails = async (req, res) => {
       category,
       location,
       eventDate,
-      company,
+
       eventDetails,
       video_url,
       reference_url,
@@ -189,7 +189,7 @@ exports.updateEventDetails = async (req, res) => {
 
       const updateData = {};
       if (eventName) updateData.eventName = eventName;
-      if (company) updateData.company = company;
+
       if (category) updateData.category = category;
       if (location) updateData.location = location;
       if (eventDate) updateData.eventDate = eventDate;

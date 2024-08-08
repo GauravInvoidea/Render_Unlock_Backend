@@ -10,7 +10,7 @@ exports.createPitchDeck = async (req, res) => {
       currentDate,
       slug
     } = req.body;
-
+    
     const filesArray = req.files.map(file => file.filename);
 
     const newPitchDeck = new PitchDecks({

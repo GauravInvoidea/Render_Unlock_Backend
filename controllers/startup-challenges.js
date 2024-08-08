@@ -9,7 +9,7 @@ exports.createStartupChallenge = async (req, res) => {
     const {
       challengeName,
       challengeDetails,
-      company,
+     
       category,
       location,
       challengeDate,
@@ -29,7 +29,7 @@ exports.createStartupChallenge = async (req, res) => {
     console.log(req.body);
 
     // Validate required fields
-    if (!challengeName || !challengeDetails || !company || !category || !location || !challengeDate || !slugname ||
+    if (!challengeName || !challengeDetails || !category || !location || !challengeDate || !slugname ||
       !registrationStartDate || !registrationEndDate || !resultDate || !prizeAmount || !type ||
       (type === "premium" && !registrationFee) || !whoCanParticipate || !currentDate) {
       return res.status(400).json({ message: "Missing required fields" });
@@ -68,7 +68,8 @@ exports.createStartupChallenge = async (req, res) => {
       challengeDetails,
       thumbnailImage,
       bannerImage,
-      company,
+     
+      
       category,
       location,
       challengeDate,
@@ -219,7 +220,7 @@ exports.updateStartupChallengeDetails = async (req, res) => {
       challengeDetails,
       category,
       location,
-      company,
+
       challengeDate,
       slug,
       registrationStartDate,
@@ -247,7 +248,7 @@ exports.updateStartupChallengeDetails = async (req, res) => {
       // Construct the update object with the fields to be updated
       const updateData = {};
       if (challengeName) updateData.challengeName = challengeName;
-      if (company) updateData.company = company;
+
       if (challengeDetails) updateData.challengeDetails = challengeDetails;
       if (req.files.thumbnailImage) updateData.thumbnailImage = req.files.thumbnailImage[0].filename;
       if (req.files.bannerImage) updateData.bannerImage = req.files.bannerImage[0].filename;
@@ -334,7 +335,7 @@ exports.updateStatusOfStartupChallenge = async (req, res) => {
         { new: true }
       );
 
-      // console.log(result)
+      // console.log(result)  
       if (result) {
         return res.status(200).json({
           message: "Status has been changed",

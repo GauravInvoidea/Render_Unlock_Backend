@@ -11,6 +11,7 @@ const StartupChallenges = require("../models/startupChallengesModel");
 const generateChallengeData = (count) => {
   const postedById = "66b1e539635a571f9b197d5e"; // Replace with actual postedBy ID
   const categoryId = "668cfc81b6d1ebffc8a440f5"; // Replace with actual category ID
+  const sampleUsers = ['66b1e539635a571f9b197d5e', '66a0e1b729cd4136121cc60f']; // Replace with actual user IDs
   bannerImagePath = "detail-page-bg.52bf8649.png";
   thumbnailImagepath = "meeting-5395615_1280.jpg" ;
   challengeDetailsData = "There are many variations of passages of Lorem Ipsum available, All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet , but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text ";
@@ -26,7 +27,7 @@ const generateChallengeData = (count) => {
       category: categoryId,
       location: "668cff16b6d1ebffc8a44176",
       challengeDate: new Date(`2024-07-${Math.floor(Math.random() * 31) + 1}`),
-      postedBy: postedById,
+      postedBy: sampleUsers[Math.floor(Math.random() * sampleUsers.length)],
       slug: `challenge-${i + 1}`,
       registrationStartDate: new Date(`2024-07-${Math.floor(Math.random() * 31) + 1}`),
       registrationEndDate: new Date(`2024-07-${Math.floor(Math.random() * 31) + 1}`),

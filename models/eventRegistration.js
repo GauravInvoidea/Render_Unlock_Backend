@@ -8,7 +8,7 @@ const EventRegistrationsSchema = new Schema({
   userId: { type: Schema.Types.ObjectId, required: true , ref: 'User' }, // Reference to Users document
   eventId: { type: Schema.Types.ObjectId, required: true , ref: 'Event' }, // Reference to Events document
   registrationDetails: { type: String,  },
-  eventType: { type: String, required: true , default : null }, // "Paid" or "Free"
+  eventType: { type: String,  default : null }, // "Paid" or "Free"
   paymentAmount: { type: Schema.Types.Decimal128, required: true , default : 0 }, // If eventType is "Paid"
   registrationStatus: { type: String, required: true , default :0  }, // "Paid" or "Unpaid"
   // createdAt: { type: Date, required: true },
